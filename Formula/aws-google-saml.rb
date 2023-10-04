@@ -1,10 +1,10 @@
 class AwsGoogleSaml < Formula
   include Language::Python::Virtualenv
 
-  desc "A user-browser driven SAML authentication tool for AWS"
+  desc "A user browser driven SAML authentication tool for AWS"
   homepage "https://github.com/bengieeee/aws-google-saml"
-  url "https://files.pythonhosted.org/packages/e2/5f/651be8efd65e7b6685287f4d965773e669b453eaea36cd27a219cdbb01bc/aws-google-saml-0.8.1.tar.gz"
-  sha256 "2772700dd90fb90b08b1b4a4e2db06a6955cc1e9fdd7f5faadcfa719747e5294"
+  url "https://files.pythonhosted.org/packages/21/e3/36a99738d0eb6983f40e015296824f3a74b864ec39e1d5c6100d9c67dfd3/aws-google-saml-0.8.2.tar.gz"
+  sha256 "ad34f7260e8a1ad472130762cf12488089a33d3529e5941392a7056f9754828b"
 
   depends_on "python3"
 
