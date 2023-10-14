@@ -21,7 +21,7 @@ jobs:
       run: |
         source venv/bin/activate
         pip install aws-google-saml homebrew-pypi-poet
-        poet --formula aws-google-saml > aws-google-saml.rb
+        poet --formula aws-google-saml > Formula/aws-google-saml.rb
         deactivate
     - name: Replace python3 with python
       run: |
@@ -31,5 +31,6 @@ jobs:
       run: |
         git config --global user.name 'Your Name'
         git config --global user.email 'your-username@users.noreply.github.com'
+        git add Formula/aws-google-saml.rb
         git commit -am "Automated report"
         git push
