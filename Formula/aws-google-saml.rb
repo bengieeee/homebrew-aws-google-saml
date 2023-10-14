@@ -3,8 +3,8 @@ class AwsGoogleSaml < Formula
 
   desc "A user browser driven SAML authentication tool for AWS"
   homepage "https://github.com/bengieeee/aws-google-saml"
-  url "https://files.pythonhosted.org/packages/08/af/16da57270e7decf3dda039256b1c2baea233862e8899b875821274995bef/aws-google-saml-2023.1014.13.tar.gz"
-  sha256 "128499a81bc5f85bdbc7dce3d8a6ae338b527a8eca9862af8445778a8b66fe2b"
+  url "https://files.pythonhosted.org/packages/fc/b7/da04a673ce483f53ff25beaee9b25250c9aec20ce3dbaf4e7c8de95100fa/aws-google-saml-2023.1014.14.tar.gz"
+  sha256 "08ecc8db41292fa034e3261652c58a877a0f61b44f2102978c8807642af522bc"
 
   depends_on "python3"
 
