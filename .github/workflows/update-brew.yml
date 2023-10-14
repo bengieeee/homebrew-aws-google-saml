@@ -2,6 +2,8 @@ name: Brew Update Package
 permissions:
   contents: write
 on:
+  workflow_dispatch:
+    inputs: null
   push:
     branches:
       - main
@@ -29,8 +31,8 @@ jobs:
         sed -i 's/Shiny new formula/A user browser driven SAML authentication tool for AWS/g' Formula/aws-google-saml.rb
     - name: Commit report
       run: |
-        git config --global user.name 'Your Name'
-        git config --global user.email 'your-username@users.noreply.github.com'
+        git config --global user.name 'Github Action'
+        git config --global user.email 'bengieeee@users.noreply.github.com'
         git add Formula/aws-google-saml.rb
-        git commit -am "Automated report"
+        git commit -am "Auto-Bump Brew Formula from PyPi"
         git push
