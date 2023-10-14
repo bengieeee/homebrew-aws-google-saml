@@ -1,4 +1,4 @@
-name: Python Package & Deploy to PyPI
+name: Brew Update Package
 permissions:
   contents: write
 on:
@@ -20,14 +20,8 @@ jobs:
     - name: Activate the newly created virtual environment
       run: |
         source venv/bin/activate
-    - name: Install dependencies in the virtual environment
-      run: |
         pip install aws-google-saml homebrew-pypi-poet
-    - name: Create formula
-      run: |
         poet --formula aws-google-saml > aws-google-saml.rb
-    - name: Deactivate the virtual environment
-      run: |
         deactivate
     - name: Replace python3 with python
       run: |
