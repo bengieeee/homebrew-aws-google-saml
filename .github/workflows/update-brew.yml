@@ -4,6 +4,8 @@ permissions:
 on:
   workflow_dispatch:
     inputs: null
+  schedule:
+    - cron: "0 1 * * *"
   push:
     branches:
       - main
@@ -11,33 +13,33 @@ jobs:
   deploy-to-pypi:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python 3.10
-      uses: actions/setup-python@v3
-      with:
-        python-version: '3.10'
-    - name: Install venv
-      run: |
-        python3 -m venv venv
-    - name: Activate the newly created virtual environment
-      run: |
-        source venv/bin/activate
-        pip install aws-google-saml homebrew-pypi-poet
-        poet --formula aws-google-saml > Formula/aws-google-saml.rb
-        deactivate
-    - name: Replace python3 with python
-      run: |
-        sed -i 's/virtualenv_create(libexec, "python3")//g' Formula/aws-google-saml.rb
-        sed -i 's/Shiny new formula/A user browser driven SAML authentication tool for AWS/g' Formula/aws-google-saml.rb
-    - name: Commit report
-      run: |
-        git config --global user.name 'Github Action's
-        git config --global user.email 'bengieeee@users.noreply.github.com'
-        git add Formula/aws-google-saml.rb
-        if [ -n "$(git status --porcelain)" ]; then
-            echo "there are changes";
-            git commit -am "Auto-Bump Brew Formula from PyPi"
-            git push
-        else
-            echo "no changes";
-        fi        
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
+      - name: Install venv
+        run: |
+          python3 -m venv venv
+      - name: Activate the newly created virtual environment
+        run: |
+          source venv/bin/activate
+          pip install aws-google-saml homebrew-pypi-poet
+          poet --formula aws-google-saml > Formula/aws-google-saml.rb
+          deactivate
+      - name: Replace python3 with python
+        run: |
+          sed -i 's/virtualenv_create(libexec, "python3")//g' Formula/aws-google-saml.rb
+          sed -i 's/Shiny new formula/A user browser driven SAML authentication tool for AWS/g' Formula/aws-google-saml.rb
+      - name: Commit report
+        run: |
+          git config --global user.name 'Github Action's
+          git config --global user.email 'bengieeee@users.noreply.github.com'
+          git add Formula/aws-google-saml.rb
+          if [ -n "$(git status --porcelain)" ]; then
+              echo "there are changes";
+              git commit -am "Auto-Bump Brew Formula from PyPi"
+              git push
+          else
+              echo "no changes";
+          fi
