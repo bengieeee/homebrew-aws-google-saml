@@ -3,19 +3,19 @@ class AwsGoogleSaml < Formula
 
   desc "A user browser driven SAML authentication tool for AWS"
   homepage "https://github.com/bengieeee/aws-google-saml"
-  url "https://files.pythonhosted.org/packages/fc/b7/da04a673ce483f53ff25beaee9b25250c9aec20ce3dbaf4e7c8de95100fa/aws-google-saml-2023.1014.14.tar.gz"
-  sha256 "08ecc8db41292fa034e3261652c58a877a0f61b44f2102978c8807642af522bc"
+  url "https://files.pythonhosted.org/packages/6e/37/5aa8fd0581790be0d5699c164d5c49b8c2732e86c7e01c0b5a79b980e995/aws-google-saml-2023.1031.17.tar.gz"
+  sha256 "41150d8deeb0b2b558897c9290238f3eb52f001ef5e78666e170e6b0cc9aa13b"
 
   depends_on "python3"
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/f5/5e/ffef00d40054c479d8bc02f4d9cd32321f591933d33493dfabd799843b76/boto3-1.28.74.tar.gz"
-    sha256 "c4d89ff98cf53e1e74ed8c1c1bb13a7bd7d909e1c0d9ad25792ccfe2cb1575bc"
+    url "https://files.pythonhosted.org/packages/f1/20/dd22d6c55fae7bba4a4b7e09c05b595606dd529d9f12efcedfe8602c4c4c/boto3-1.28.75.tar.gz"
+    sha256 "63d772a784e8e35ee51974eb1c20dff5faa51b007d22c5647783f18966bf4042"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/56/5c/560069600c436b384202a74558b6b6143fc7a62d87dfab0c10b8bbbebc0a/botocore-1.31.74.tar.gz"
-    sha256 "2549ca7dc0f9227d8692a56a133c1346642efb38736c7c3f1330724d937ad6ec"
+    url "https://files.pythonhosted.org/packages/2f/fb/4f1ace3a7cdf9dd0bcc91749f23abd44cb399bda04df2f9a7d06949fbe3f/botocore-1.31.75.tar.gz"
+    sha256 "d704ea9867b2227de0350bc2a5ca2543349e164ecb5d15edbfacbb05f2056482"
   end
 
   resource "jmespath" do
