@@ -9,13 +9,13 @@ class AwsGoogleSaml < Formula
   depends_on "python3"
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/47/87/87aa0bedda7591bb7da730a415c2ba8520c80e0a5011648de5ede40aad9d/boto3-1.33.0.tar.gz"
-    sha256 "ebf6d86217c37986f965dbe35a3bbd0318127d23a65737ab6486667496decb54"
+    url "https://files.pythonhosted.org/packages/9d/4d/09a3eb00e6d017dafae80c6ea307992263405aad315587e0b63864ae97e5/boto3-1.33.2.tar.gz"
+    sha256 "70626598dd6698d6da8f2854a1ae5010f175572e2a465b2aa86685c745c1013c"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/1a/46/06e9194e52bc3598225944152710829c27d257ad0cc6144d408f10840868/botocore-1.33.0.tar.gz"
-    sha256 "e35526421fe8ee180b6aed3102929594aa51e4d60e3f29366a603707c37c0d52"
+    url "https://files.pythonhosted.org/packages/d5/73/40c9dd27acb7fad5d13259c406d305e4452f927d1b1dd16eee79586f5f9c/botocore-1.33.2.tar.gz"
+    sha256 "16a30faac6e6f17961c009defb74ab1a3508b8abc58fab98e7cf96af0d91ea84"
   end
 
   resource "jmespath" do
@@ -29,8 +29,8 @@ class AwsGoogleSaml < Formula
   end
 
   resource "s3transfer" do
-    url "https://files.pythonhosted.org/packages/48/62/53056e8a931a004b9a958c7ca709350a94e212ebcadfc9914a2a8bfaa4ec/s3transfer-0.8.0.tar.gz"
-    sha256 "e8d6bd52ffd99841e3a57b34370a54841f12d3aab072af862cdcc50955288002"
+    url "https://files.pythonhosted.org/packages/d3/8c/babd90ebb61a8ce1ade0dc1f87e067287f7d97bf84d5ded1c4cc3fed5134/s3transfer-0.8.1.tar.gz"
+    sha256 "e6cafd5643fc7b44fddfba1e5b521005675b0e07533ddad958a3554bc87d7330"
   end
 
   resource "six" do
