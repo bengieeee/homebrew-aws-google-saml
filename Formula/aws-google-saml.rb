@@ -9,13 +9,13 @@ class AwsGoogleSaml < Formula
   depends_on "python3"
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/46/d5/2eda9ef554182c3b306ea18c049f152be8495198911ce0c4c2375eb6a236/boto3-1.35.64.tar.gz"
-    sha256 "bc3fc12b41fa2c91e51ab140f74fb1544408a2b1e00f88a4c2369a66d18ddf20"
+    url "https://files.pythonhosted.org/packages/3a/33/f4155a18a3c374be75638ae83e7e0d6958bcdff50c4fcec9d6340286ec69/boto3-1.35.65.tar.gz"
+    sha256 "f6c266b4124b92b1603727bf1ed1917e0b74a899bd0e326f151d80c3eaed27a1"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/0e/d3/71c2bbccea5a307e9b6218e41b5189d5e0c61217dc8d883dcac6a2aae762/botocore-1.35.64.tar.gz"
-    sha256 "2f95c83f31c9e38a66995c88810fc638c829790e125032ba00ab081a2cf48cb9"
+    url "https://files.pythonhosted.org/packages/f0/9c/1d9c4a4d0a77659c5404b978a86453214563387a5332587eaedc28c4bbe2/botocore-1.35.65.tar.gz"
+    sha256 "46652f732f2b2fb395fffcc33cacb288d05ea283047c9a996fb59d6849464919"
   end
 
   resource "jmespath" do
